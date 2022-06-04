@@ -1,6 +1,7 @@
 const WebsiteModel = require("../models/website.model");
 const axios = require("axios").default;
 axios.defaults.timeout = 5000;
+const sendEmail = require("./mailer");
 
 const CronJob = async () => {
   setInterval(async () => {
@@ -26,6 +27,7 @@ const CronJob = async () => {
             website.isUp = false;
             website.lastUpTime = website.lastCheck;
             website.lastCheck = new Date();
+            await sendEmail(website.users, website.websiteURL+" is down", website.websiteURL+' is down');
           } else {
             website.totalDowntime += new Date() - website.lastCheck;
             website.uptimePercent =
@@ -43,6 +45,7 @@ const CronJob = async () => {
           website.isUp = false;
           website.lastUpTime = new Date();
           website.lastCheck = new Date();
+          await sendEmail(website.users, website.websiteURL+" is down", website.websiteURL+' is down');
         } else {
           website.totalDowntime += new Date() - website.lastCheck;
           website.uptimePercent =

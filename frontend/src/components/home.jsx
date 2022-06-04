@@ -105,7 +105,7 @@ class Home extends Component {
     });
     const data = await response.json();
     if (data.status === "ok") {
-      const response = await fetch("http://localhost:8080/api/websites", {
+      const response = await fetch("http://localhost:8080/api/get_websites", {
         method: "GET",
         headers: {
           "x-access-token": token,

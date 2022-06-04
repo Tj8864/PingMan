@@ -30,7 +30,6 @@ const handleWebsiteListQuery = async (request, response) => {
           id: website._id.toString(),
         });
       });
-      console.log(websites);
       response.json({ status: "ok", websites });
     } else response.json({ status: "error", error: "invalid token" });
   } catch (e) {
