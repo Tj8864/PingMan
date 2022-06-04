@@ -1,0 +1,78 @@
+.login-root {
+    height: 100vh;
+    width: 100vw;
+    background: url('../../public/434844.webp');
+}
+.login-root > nav > a {
+    height: 5vh;
+    line-height: 5vh;
+    padding-left: 2vw;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+.login-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form.login-form {
+    margin-top: 2vh;
+    height: 60vh;
+    width: 40vw;
+    min-width: 520px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form.login-form > input[type="email"], form.login-form > input[type="password"]{
+    padding-left: 1vw;
+    width: 15vw;
+    min-width: 300px;
+    height: 4em;
+    border-radius: 2vw;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: white;
+}
+
+form.login-form > input[type="submit"] {
+    padding-left: 0.5vw;
+    width: 10vw;
+    min-width: 200px;
+    height: 3em;
+    border-radius: 1vw;
+    background: rgba(60, 0, 120, 0.6);
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 3vh;
+    border: none;
+}
+
+.failed-dialogue {
+    height: 8vh;
+    width: 35vw;
+    min-width: 450px;
+    background: rgba(100, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 2vh;
+    line-height: 8vh;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
